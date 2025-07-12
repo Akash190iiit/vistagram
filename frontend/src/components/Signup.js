@@ -8,7 +8,7 @@ const Signup = ({ onAuthSuccess }) => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/signup", { username, password });
+      const res = await axios.post("/auth/signup", { username, password });
       localStorage.setItem("token", res.data.token);
       alert("Signup successful!");
       onAuthSuccess(); // e.g., redirect or refresh

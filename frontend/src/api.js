@@ -8,7 +8,7 @@ import axios from "axios";
 //     baseURL: "https://vistagram-cgf0.onrender.com/api"
 //   });
 const API = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE_URL || "https://vistagram-cgf0.onrender.com/api"
+    baseURL: process.env.REACT_APP_API_BASE_URL
   });
 
 console.log("API Base URL:", API.defaults.baseURL);  

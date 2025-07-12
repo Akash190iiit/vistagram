@@ -8,7 +8,7 @@ const Login = ({ onAuthSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/login", { username, password });
+      const res = await axios.post("/auth/login", { username, password });
       localStorage.setItem("token", res.data.token);
       alert("Login successful!");
       onAuthSuccess(); // e.g., redirect or refresh
